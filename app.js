@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const port = 3030;
-const views = path.join(__dirname, 'DH-Heroes','views');
+const views = path.join(__dirname,'views');
 
 app.listen(port, () =>{
     console.log(`Corriendo en el servidor ${port}`);
@@ -31,4 +31,4 @@ app.get('/lovelace', (req, res) => {
 app.get('/turing', (req, res) => {
     res.sendFile(path.join(views, 'turing.html'));
 });
-app.use(express.static('./DH-Heroes/public'))
+app.use(express.static('public'))
